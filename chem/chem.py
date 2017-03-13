@@ -4,14 +4,32 @@
 # Element Diversity Project
 import colorama
 import os
+import sys
+import time
 
 from colorama import Fore, Back, Style
+
+def cls(): # Clear the screen depending on system and configuration
+    global inIdle
+    if inIdle == False:
+        os.system('cls' if os.name == 'nt' else 'clear')
+    else:
+        print ("-"*40)
+
+print('Running in IDLE' if 'idlelib.run' in sys.modules else 'Not running in IDLE')
+if 'idlelib.run' in sys.modules: # Check if running in idle or not, and set a variable for use in CLS
+    inIdle = True
+else:
+    inIdle = False 
+    
+time.sleep(.5)
+cls()
 
 start = '\033[1m'
 end = '\033[0;0m'
 
 colorama.init()
-os.system('clear')
+cls()
 while True:
     print(Fore.CYAN+"Element Diversity Project")
     print("Emelia Blankenship"+Style.RESET_ALL)
@@ -25,7 +43,7 @@ while True:
     print(Fore.RED+"q to quit"+Style.RESET_ALL)
     print()
     choice = input("Which option would you like to expand? (Please input the number)\n")
-    os.system('clear')
+    cls()
     print()
     if choice == '1':
         print(Fore.YELLOW+"BASIC INFO - MOLYBDENUM"+Style.RESET_ALL)
@@ -42,7 +60,7 @@ while True:
         print(Fore.WHITE,start,"Neutrons - "+Style.RESET_ALL,end,Fore.WHITE+"54"+Style.RESET_ALL)
         print()
         input("Press enter to return.")
-        os.system('clear')
+        cls()
         
     elif choice == '2':
         print(Fore.YELLOW+"SIMILAR ELEMENTS - MOLYBDENUM"+Style.RESET_ALL)
@@ -66,7 +84,7 @@ while True:
         print(Fore.WHITE,start,"Larger Electronegativity:"+end+"\nPd has a larger electronegativity because it is placed to the right of Mo on the periodic table, meaning that it has more protons. Having more protons causes more of a pull on the electrons, and a bigger desire to gain electrons."+Style.RESET_ALL)
         print()
         input(Fore.WHITE+"Press enter to return."+Style.RESET_ALL)
-        os.system('clear')
+        cls()
         
     elif choice == '3':
         print(Fore.YELLOW+"ELECTRON INFORMATION - MOLYBDENUM"+Style.RESET_ALL)
@@ -99,7 +117,7 @@ while True:
         print(Fore.MAGENTA+"Partially Occupied Orbitals: "+Style.RESET_ALL+Fore.WHITE+"4"+Style.RESET_ALL)
         print()
         input("Press enter to return.")
-        os.system('clear')
+        cls()
         
     elif choice == '4':
         print(Fore.YELLOW+"BASIC INFO - ARSENIC"+Style.RESET_ALL)
@@ -116,7 +134,7 @@ while True:
         print(Fore.WHITE,start,"Neutrons - ",end,Style.RESET_ALL+Fore.WHITE+"42"+Style.RESET_ALL)
         print()
         input("Press enter to return.")
-        os.system('clear')
+        cls()
         
     elif choice == '5':
         print(Fore.YELLOW+"SIMILAR ELEMENTS - ARSENIC"+Style.RESET_ALL)
@@ -140,7 +158,7 @@ while True:
         print(Fore.WHITE,start,"Larger Electronegativity:",end,"\nSe has a larger electronegativity because it is placed to the right of As on the periodic table, meaning that it has more protons. Having more protons causes more of a pull on the electrons, and a bigger desire to gain electrons because of the pull."+Style.RESET_ALL)
         print()
         input(Fore.WHITE+"Press enter to return."+Style.RESET_ALL)
-        os.system('clear')
+        cls()
         
     elif choice == '6':
         print(Fore.YELLOW+"ELECTRON INFORMATION - ARSENIC"+Style.RESET_ALL)
@@ -173,11 +191,11 @@ while True:
         print(Fore.MAGENTA+"Partially Occupied Orbitals: "+Style.RESET_ALL+Fore.WHITE+"3"+Style.RESET_ALL)
         print()
         input("Press enter to return.")
-        os.system('clear')
+        cls()
     elif choice == 'q':
               break
     else:
         input(Fore.RED+"This is not a valid input. Press enter to return to menu.\n"+Style.RESET_ALL)
-        os.system('clear')
+        cls()
         print()
         
