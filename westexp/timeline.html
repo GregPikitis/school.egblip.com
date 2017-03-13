@@ -1,0 +1,33 @@
+<html>
+	<head>
+	<meta charset="UTF-8">
+		<title>Westward Expansion - Timeline</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body class="center">
+		<div class="center" id="header">Westward Expansion</div>
+		<div class="textBox">
+			<div class="links"><a href="index.html">Intro</a> | <a href="md.html">Manifest Destiny</a> | <a href="ira.html">IRA</a> | <a href="aotw.html">Appeal of the West</a> | <a href="ni.html">Native Impact</a> | <a href="timeline.html">Timeline</a> | <a href="citations.html">Works Cited</a></div>
+			<div class="smallHeader">Timeline</div>
+			<iframe class="textContainer" onmousewheel="" frameborder="0" style="border-width:0; padding-top: 15px;" id="tl-timeline-iframe" width="500" height="300" src="http://www.tiki-toki.com/timeline/embed/574051/1884510992/"></iframe>
+			<script type="text/javascript">
+				if (window.postMessage) {
+					var tlMouseupFunc = function() {
+						var tlFrame = document.getElementById("tl-timeline-iframe");
+						if (tlFrame.contentWindow && tlFrame.contentWindow.postMessage) {
+							tlFrame.contentWindow.postMessage("mouseup","*");
+						}
+					}
+					if (typeof window.addEventListener != "undefined") {
+						window.addEventListener("mouseup", tlMouseupFunc, false);
+					} else if (typeof window.attachEvent != "undefined") {
+						window.attachEvent("onmouseup", tlMouseupFunc);
+					}
+				}
+			</script>
+		</div>
+		<div class="horizontalLine"></div>
+		<div id="footer">Emelia Blankenship, 2015</div>
+		<div id="footer" style="font-size:12;">Template by Jake Dillon</div>
+	</body>
+</html>
