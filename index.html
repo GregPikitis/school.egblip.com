@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<title>School</title>
 		<!--Credit to caligari87 on reddit for the base code-->
 		<style>
 			:focus { outline:0; /*removes the dotted link border*/ }
@@ -14,8 +15,9 @@
 				font-family:arial, sans-serif;
 				font-size:13px;
 				background-color: silver;
-				background-image: url("resources/background.png");
-				background-repeat:repeat;
+				background: url("resources/background.png") no-repeat center center;
+				background-size: cover;
+				background-attachment: fixed;
 				color: #222222;
 			}
 
@@ -53,6 +55,7 @@
 				position:absolute;
 				bottom:0;
 				padding:5px;
+				color: grey;
 			}
 
 			img {
@@ -63,16 +66,29 @@
 		</style>
 	</head>
 	<body>
-		<p style="text-align: left; margin: 0px;"><a href="?run=true" ;="" style="text-align:left;">Refresh</a></p>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-99868303-2', 'auto');
+		  ga('send', 'pageview');
+		</script>
 
 		<div class="centerbox">
 			<h1>School Sites!</h1>
+			<a href="http://bulbapp.com/blankenship"><div class="iconbox"><img src="resources/icons/bulb.png"></br>Bulb Portfolio</div></a>
+			<a href="westexp/"><div class="iconbox"><img src="resources/icons/history.png"></br>Western Expansion</div></a>
+			<a href="gaslaws/"><div class="iconbox"><img src="resources/icons/chemistry.png"></br>Gas Laws</div></a>
+			<a href="https://infogr.am/1f271f04-4d94-43cf-96f6-6abef128bb13"><div class="iconbox"><img src="resources/icons/history.png"></br>WWII Infographic</div></a>
+			<a href="character2017/"><div class="iconbox"><img src="resources/icons/school.png"></br>Character 2017</div></a>
+			<a href="resources/oskar.pdf"><div class="iconbox"><img src="resources/icons/book.png"></br>PTSD Essay</div></a>
+			<a href="resources/Censored2017Resume.pdf"><div class="iconbox"><img src="resources/icons/resume.png"></br>Resume</div></a>
+			<a href="CYOA/"><div class="iconbox"><img src="resources/icons/cyoa.png"></br>Choose Your Own Adventure</div></a>
 
-			<a href="westexp/index.html"><div class="iconbox"><img src="resources/icons/history.png"></br>Western Expansion</div></a>
-			<a href="gaslaws/index.html"><div class="iconbox"><img src="resources/icons/chemistry.png"></br>Gas Laws</div></a>
-			<a href="http://egblip.com/2016resume.pdf"><div class="iconbox"><img src="resources/icons/resume.png"></br>Resume</div></a>
 		</div>
 
-		<footer>Based off of caligari87's Startpage</footer>
+		<footer class="hidden">Based on <a href="https://github.com/caligari87/startpage" style="color:grey">caligari87's Startpage</a></footer>
 	</body>
 </html>
